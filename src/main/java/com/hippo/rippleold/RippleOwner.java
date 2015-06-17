@@ -18,13 +18,6 @@ package com.hippo.rippleold;
 
 
 public interface RippleOwner {
-    /**
-     * Constant for automatically determining the maximum ripple radius.
-     */
-    int RADIUS_AUTO = -1;
-
-    void removeRipple(Ripple ripple);
 
     void invalidateSelf();
-
 }
