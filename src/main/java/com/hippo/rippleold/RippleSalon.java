@@ -44,7 +44,7 @@ public final class RippleSalon {
     public static void addRipple(View v, ColorStateList color, Drawable content) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             RippleDrawable rippleDrawable = new RippleDrawable(color, content);
-            v.setOnTouchListener(new HotspotTouchHelper(rippleDrawable));
+            HotspotTouchHelper.setHotspotTouchHelper(v, new HotspotTouchHelper(rippleDrawable));
             v.setBackgroundDrawable(rippleDrawable);
         } else {
             android.graphics.drawable.RippleDrawable rippleDrawable =
