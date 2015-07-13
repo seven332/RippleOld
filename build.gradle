@@ -19,7 +19,8 @@ android {
 }
 
 dependencies {
+    compile project(':hotspot')
+    compile project(':yorozuya')
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:support-annotations:22.2.0'
-    compile project(':hotspot')
 }

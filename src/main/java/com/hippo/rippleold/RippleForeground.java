@@ -27,6 +27,8 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.view.animation.LinearInterpolator;
 
+import com.hippo.yorozuya.MathUtils;
+
 /**
  * Draws a ripple foreground.
  */
