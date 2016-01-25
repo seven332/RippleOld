@@ -54,13 +54,17 @@ public final class RippleSalon {
     }
 
     public static Drawable generateRippleDrawable(boolean dark) {
-        ColorStateList color = ColorStateList.valueOf(
-                dark ? RIPPLE_MATERIAL_DARK : RIPPLE_MATERIAL_LIGHT);
-        return generateRippleDrawable(color);
+        return generateRippleDrawable(dark, null);
     }
 
     public static Drawable generateRippleDrawable(ColorStateList color) {
         return generateRippleDrawable(color, null);
+    }
+
+    public static Drawable generateRippleDrawable(boolean dark, Drawable content) {
+        ColorStateList color = ColorStateList.valueOf(
+                dark ? RIPPLE_MATERIAL_DARK : RIPPLE_MATERIAL_LIGHT);
+        return generateRippleDrawable(color, content);
     }
 
     public static Drawable generateRippleDrawable(ColorStateList color, Drawable content) {
