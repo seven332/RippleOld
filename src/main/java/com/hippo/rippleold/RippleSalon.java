@@ -37,6 +37,16 @@ public final class RippleSalon {
     }
 
     public static void addRipple(View v, ColorStateList color) {
+        Drawable bg = v.getBackground();
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            if (bg instanceof RippleDrawable) {
+                return;
+            }
+        } else {
+            if (bg instanceof android.graphics.drawable.RippleDrawable) {
+                return;
+            }
+        }
         addRipple(v, color, v.getBackground());
     }
 
